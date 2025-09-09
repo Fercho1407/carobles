@@ -1,0 +1,143 @@
+/* ===== Fieldset ===== */
+.fieldset-fluid { width: 100%; }
+
+fieldset {
+    border: 2px solid #123b79;
+    border-radius: 8px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+/* ===== Legend ===== */
+legend {
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #123b79;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+legend:hover {
+    background-color: #0f2d5e;
+    cursor: default;
+}
+
+/* ===== Contenedor tabla ===== */
+.table-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%; 
+    overflow-x: auto;
+}
+
+/* Wrapper de DataTables */
+div.dataTables_wrapper {
+    width: 100%;
+}
+
+/* ===== Tabla base ===== */
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+thead {
+    background-color: #1f3c88;
+    color: #fff;
+}
+
+thead th {
+    padding: 8px 10px !important;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody td {
+    padding: 8px 10px !important;
+    box-sizing: border-box;
+}
+
+/* Alineación vertical */
+td, th {
+    vertical-align: middle;
+}
+
+/* ===== DataTables ===== */
+
+/* Fuerza ancho total y fijo para evitar desfase */
+table.dataTable {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+.dataTables_wrapper .dataTables_scrollHead table,
+.dataTables_wrapper .dataTables_scrollBody table {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+/* Sincronizar scroll */
+.dataTables_wrapper .dataTables_scroll {
+    overflow: auto;
+}
+
+/* Hover */
+table.dataTable.table-hover tbody tr:hover,
+table.dataTable.table-hover tbody tr:hover > td,
+table.dataTable.table-hover tbody tr:hover > th {
+    background-color: #ADC8FF !important;
+}
+
+/* Filas alternadas */
+table.dataTable.stripe tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+table.dataTable.stripe tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Paginación */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background: #123b79;
+    border-radius: 4px;
+    color: white !important;
+    border: none;
+    padding: 5px 10px;
+    margin: 2px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #0f2d5e;
+    color: #fff !important;
+}
+
+/* Inputs y selects */
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px;
+    outline: none;
+}
+
+/* Evitar nowrap global: solo en columnas necesarias */
+.nowrap {
+    white-space: nowrap;
+}

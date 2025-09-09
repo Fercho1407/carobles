@@ -1,0 +1,83 @@
+/* Contenedor general con scroll horizontal */
+.table-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%;
+  overflow-x: auto;         /* clave para no cortar */
+}
+
+/* Asegura que el wrapper de DataTables no limite el ancho */
+.dataTables_wrapper {
+  width: 100% !important;
+}
+
+/* Cuando DataTables crea el contenedor de scroll */
+.dataTables_scroll {
+  width: 100% !important;
+}
+.dataTables_scrollHead, .dataTables_scrollBody, .dataTables_scrollFoot {
+  width: 100% !important;
+}
+
+/* Tabla compacta y reparto fijo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  table-layout: fixed;      /* reparte ancho y evita saltos */
+}
+
+th, td {
+  padding: 10px 12px;
+  white-space: nowrap;      /* no romper celdas */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* … cuando no quepa */
+  vertical-align: middle;
+}
+
+/* Encabezado y estilos DataTables (ya los tienes, refuerzo de color) */
+table.dataTable thead {
+  background-color: #123b79;
+  color: #fff;
+}
+
+/* Botones de acción más compactos */
+.table-actions .btn-warning-custom,
+.table-actions .btn-danger-custom {
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Responsive móvil con data-label (ya tenías esto, lo dejamos igual) */
+@media (max-width: 768px) {
+  thead { display: none; }
+  tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+  tbody td, tbody th[scope="row"] {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+  }
+  tbody td::before, tbody th[scope="row"]::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #1f3c88;
+    margin-right: 8px;
+  }
+}
+.titulo-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
